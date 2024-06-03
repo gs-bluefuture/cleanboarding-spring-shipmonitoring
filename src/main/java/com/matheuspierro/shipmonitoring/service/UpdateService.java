@@ -1,6 +1,7 @@
 package com.matheuspierro.shipmonitoring.service;
 
 import com.matheuspierro.shipmonitoring.dto.ShipMovement;
+import com.matheuspierro.shipmonitoring.exception.ServiceException;
 import com.matheuspierro.shipmonitoring.model.BallastOperation;
 import com.matheuspierro.shipmonitoring.model.HistoryShipLocation;
 import com.matheuspierro.shipmonitoring.model.Location;
@@ -33,19 +34,34 @@ public class UpdateService {
     private OperationMonitorRepository operationMonitorRepository;
 
     public void updateShipData() {
-        List<ShipMovement> movements = externalApiService.fetchShipMovements();
+        List<ShipMovement> movements;
+        try {
+            movements = externalApiService.fetchShipMovements();
+        } catch (Exception e) {
+            throw new ServiceException("Error fetching ship movements from external API", e);
+        }
+
         for (ShipMovement movement : movements) {
-            Ship ship = shipRepository.findByName(movement.shipName()).orElseGet(() -> {
-                Ship newShip = new Ship();
-                newShip.setName(movement.shipName());
-                return newShip;
-            });
-            shipRepository.save(ship);
+            Ship ship;
+            try {
+                ship = shipRepository.findByName(movement.shipName()).orElseGet(() -> {
+                    Ship newShip = new Ship();
+                    newShip.setName(movement.shipName());
+                    return newShip;
+                });
+                shipRepository.save(ship);
+            } catch (Exception e) {
+                throw new ServiceException("Error saving ship data", e);
+            }
 
             Location location = new Location();
             location.setLat(movement.latitude());
             location.setLon(movement.longitude());
-            locationRepository.save(location);
+            try {
+                locationRepository.save(location);
+            } catch (Exception e) {
+                throw new ServiceException("Error saving location data", e);
+            }
 
             BallastOperation operation = new BallastOperation();
             operation.setShip(ship);
@@ -53,26 +69,39 @@ public class UpdateService {
             operation.setOperationType(movement.operationType());
             operation.setOperationTimestamp(movement.timestamp());
             operation.setWaterAmount(movement.waterAmount());
-            ballastOperationRepository.save(operation);
+            try {
+                ballastOperationRepository.save(operation);
+            } catch (Exception e) {
+                throw new ServiceException("Error saving ballast operation data", e);
+            }
 
             HistoryShipLocation history = new HistoryShipLocation();
             history.setShip(ship);
             history.setLocation(location);
             history.setTimestamp(movement.timestamp());
-            historyShipLocationRepository.save(history);
+            try {
+                historyShipLocationRepository.save(history);
+            } catch (Exception e) {
+                throw new ServiceException("Error saving history ship location data", e);
+            }
 
-            OperationMonitor monitor = operationMonitorRepository.findByShipName(ship.getName()).orElseGet(() -> {
-                OperationMonitor newMonitor = new OperationMonitor();
-                newMonitor.setShip(ship);
-                newMonitor.setOperation(operation);
-                newMonitor.setMetricName("Operation Metric");
-                newMonitor.setMetricValue(movement.waterAmount());
-                newMonitor.setMetricTimestamp(movement.timestamp());
-                return newMonitor;
-            });
-            monitor.setMetricValue(movement.waterAmount());
-            monitor.setMetricTimestamp(movement.timestamp());
-            operationMonitorRepository.save(monitor);
+            OperationMonitor monitor;
+            try {
+                monitor = operationMonitorRepository.findByShipName(ship.getName()).orElseGet(() -> {
+                    OperationMonitor newMonitor = new OperationMonitor();
+                    newMonitor.setShip(ship);
+                    newMonitor.setOperation(operation);
+                    newMonitor.setMetricName("Operation Metric");
+                    newMonitor.setMetricValue(movement.waterAmount());
+                    newMonitor.setMetricTimestamp(movement.timestamp());
+                    return newMonitor;
+                });
+                monitor.setMetricValue(movement.waterAmount());
+                monitor.setMetricTimestamp(movement.timestamp());
+                operationMonitorRepository.save(monitor);
+            } catch (Exception e) {
+                throw new ServiceException("Error saving operation monitor data", e);
+            }
         }
     }
 }
