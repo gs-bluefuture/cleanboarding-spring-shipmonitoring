@@ -31,7 +31,9 @@ Para executar o projeto, siga estas etapas:
    ```bash
    git clone https://github.com/gs-bluefuture/cleanboarding-spring-shipmonitoring.git
    git clone https://github.com/gs-bluefuture/cleanboarding-spring-external-api.git
-
+2. Clique no Link para enchaminhar para o Swagger:
+   http://localhost:8081/swagger-ui/index.html
+3 Execute as requisições via Swagger   
 ### 🚀 Requisições via Postman
 Para executar as requisições é necessário se autenticar:
 - **Basic Auth**
