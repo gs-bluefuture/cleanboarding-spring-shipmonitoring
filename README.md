@@ -43,6 +43,10 @@ Para executar as requisições é necessário se autenticar:
 - **Basic Auth**
   - **Username:** rm96920
   - **Senha:** 080903
+Para executar a api de Update:
+- **Basic Auth**
+  - **Username:** admin
+  - **Senha:** admin
 ### 🚀 Link do video Pitch e da aplicação rodando:
    ```bash
          Video 1
