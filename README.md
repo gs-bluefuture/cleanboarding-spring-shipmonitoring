@@ -39,11 +39,11 @@ Para executar o projeto, siga estas etapas:
      https://clean-boarding-monitoring.azurewebsites.net/swagger-ui/index.html#/ 
 3 Execute as requisições via Swagger   
 ### 🚀 Requisições via Postman
-Para executar as requisições é necessário se autenticar:
+-Para executar as requisições é necessário se autenticar:
 - **Basic Auth**
   - **Username:** rm96920
   - **Senha:** 080903
-Para executar a api de Update:
+-Para executar a api de Update:
 - **Basic Auth**
   - **Username:** admin
   - **Senha:** admin
