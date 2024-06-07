@@ -34,12 +34,21 @@ Para executar o projeto, siga estas etapas:
 2. Clique no Link para enchaminhar para o Swagger:
    ```bash 
    http://localhost:8081/swagger-ui/index.html
+2. Clique no Link da aplicação com o Deploy:
+   ```bash 
+     https://clean-boarding-monitoring.azurewebsites.net/swagger-ui/index.html#/ 
 3 Execute as requisições via Swagger   
 ### 🚀 Requisições via Postman
 Para executar as requisições é necessário se autenticar:
 - **Basic Auth**
   - **Username:** rm96920
   - **Senha:** 080903
+### 🚀 Link do video Pitch e da aplicação rodando:
+   ```bash
+         Video 1
+         Video 2
+  
+
 
 
   
