@@ -42,7 +42,7 @@ Para executar o projeto, siga estas etapas:
 -Para executar as requisições é necessário se autenticar:
 - **Basic Auth**
   - **Username:** rm96920
-  - **Senha:** 080903   
+  - **Senha:** 080903  
 -Para executar a api de Update:
 - **Basic Auth**
   - **Username:** admin
@@ -51,7 +51,6 @@ Para executar o projeto, siga estas etapas:
    ```bash
          Video 1
          Video 2
-  
 
 
 
