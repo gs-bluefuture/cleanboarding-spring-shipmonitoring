@@ -37,19 +37,19 @@ Para executar o projeto, siga estas etapas:
 2. Clique no Link da aplicação com o Deploy:
    ```bash 
      https://clean-boarding-monitoring.azurewebsites.net/swagger-ui/index.html#/ 
-3 Execute as requisições via Swagger   
+4. Execute as requisições via Swagger   
 ### 🚀 Requisições via Postman
--Para executar as requisições é necessário se autenticar:
+Para executar as requisições é necessário se autenticar:
 - **Basic Auth**
   - **Username:** rm96920
   - **Senha:** 080903  
--Para executar a api de Update:
+Para executar a api de Update:
 - **Basic Auth**
   - **Username:** admin
   - **Senha:** admin
-### Aplicação grafana com dasboards
+### Aplicação grafana com dashboards
 ![Descrição da Imagem](https://i.imgur.com/v9afiqw.png)
 ### 🚀 Link do video Pitch e da aplicação rodando:
    ```bash
-         Video da aplicação https://youtu.be/k2M67QmeYHQ
-         Video 2
+         Video da aplicação: https://youtu.be/k2M67QmeYHQ
+         Video Pitch:
