@@ -47,11 +47,9 @@ Para executar o projeto, siga estas etapas:
 - **Basic Auth**
   - **Username:** admin
   - **Senha:** admin
+### Aplicação grafana com dasboards
+![Descrição da Imagem](https://i.imgur.com/v9afiqw.png)
 ### 🚀 Link do video Pitch e da aplicação rodando:
    ```bash
          Video da aplicação https://youtu.be/k2M67QmeYHQ
          Video 2
-
-
-
-  
