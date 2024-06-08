@@ -38,7 +38,19 @@ Para executar o projeto, siga estas etapas:
    ```bash 
      https://clean-boarding-monitoring.azurewebsites.net/swagger-ui/index.html#/ 
 4. Execute as requisições via Swagger   
-### 🚀 Requisições via Postman
+### 🚀 Requisições via Postamn 
+https://external-api-clean-boarding.azurewebsites.net/api/movements  (GET)  
+https://clean-boarding-monitoring.azurewebsites.net/update (POST)  
+https://clean-boarding-monitoring.azurewebsites.net/ships (GET)  
+https://clean-boarding-monitoring.azurewebsites.net/ships (POST)  
+Body:  
+{  
+  "shipId": 1,  
+  "name": "Ship A",  
+  "shipType": "Transporte",  
+  "ballastCapacity": 10000  
+}  
+
 Para executar as requisições é necessário se autenticar:
 - **Basic Auth**
   - **Username:** rm96920
