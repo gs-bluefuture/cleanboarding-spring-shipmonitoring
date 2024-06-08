@@ -49,7 +49,7 @@ Para executar o projeto, siga estas etapas:
   - **Senha:** admin
 ### 🚀 Link do video Pitch e da aplicação rodando:
    ```bash
-         Video 1
+         Video da aplicação https://youtu.be/k2M67QmeYHQ
          Video 2
 
 
