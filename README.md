@@ -66,4 +66,5 @@ Para executar a api de Update:
    ```bash
          Video da aplicação: https://youtu.be/k2M67QmeYHQ
          Video confirmando que houve o Deploy: https://youtu.be/MFnlWymMPUU
-         Video Pitch: 
+         Video Pitch: https://drive.google.com/file/d/1pxPre33uC7zi0iCRKyOSQc9E7UC25Nte/view?usp=sharing
+         Video Pitch Youtube: https://youtu.be/fIOZVhTXK9Y
