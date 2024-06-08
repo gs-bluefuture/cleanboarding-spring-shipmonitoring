@@ -49,7 +49,9 @@ Para executar a api de Update:
   - **Senha:** admin
 ### Aplicação grafana com dashboards
 ![Descrição da Imagem](https://i.imgur.com/v9afiqw.png)
+![Descrição da Imagem](https://i.imgur.com/0sUowDB.png)
 ### 🚀 Link do video Pitch e da aplicação rodando:
    ```bash
          Video da aplicação: https://youtu.be/k2M67QmeYHQ
-         Video Pitch:
+         Video confirmando que houve o Deploy: https://youtu.be/MFnlWymMPUU
+         Video Pitch: 
